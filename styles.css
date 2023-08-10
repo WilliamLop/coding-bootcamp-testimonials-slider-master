@@ -9,6 +9,7 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     position: relative;
     box-sizing: border-box;
@@ -31,8 +32,10 @@ body{
     margin: auto;
     opacity: 0;
     height: 80%;
+    max-width: 450px;
     transition: opacity .5s ease-in-out;
 }
+
 
 .card__content{
     display: grid;
@@ -85,13 +88,15 @@ body{
 }
 
 .btn{
-    border: none;
     background-color: transparent;
     cursor: pointer;
+    border: none;
+    font-size: 1.1em;
+    color: var(--DarkBlue);
 }
 
-.btn img{
-    width: 10px;
+.btn--active{
+    color: blue;
 }
 
 
@@ -120,14 +125,121 @@ body{
 }
 
 .curve{
-    align-self: end;
-    height: 100px;
     width: 100%;
+    height: 10vh;
     background: url(images/pattern-curve.svg) no-repeat;
     background-size: contain;
-    background-position: bottom;
+    background-position: left;
 }
 
-footer{
-    height: 10vh;
+@media (min-width: 48rem){
+
+    .main{
+        height: 80vh;
+        padding: 0;
+    }
+
+    .figure__img{
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+    
+    .img__user{
+        max-width: 450px;
+    }
+
+    .card{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0;
+        height: 100%;
+        transition: opacity .5s ease-in-out;
+        display: grid;
+        max-width: 700px;
+    }
+
+    .card__content{
+        align-self: end;
+        grid-template-columns: 1fr 1fr;
+        height: 80%;
+    }
+    .card__info--container{
+        grid-column: 1 / 2;
+        grid-row: 1;
+        align-self: center;
+    }
+    .card__img--container{
+        align-self: center;
+    }
+
+    .card__info{
+        text-align: start;
+    }
+
+    .card--active{
+        opacity: 1;
+        transition: opacity .5s ease-in-out;
+    }
+
+    .card__paragraph{
+        width: 350px;
+        font-size: 1.07em;
+        color: var(--DarkBlue);
+    }
+    
+
+    .info__user{
+        display: flex;
+        gap: .5rem;
+    }
+    
+    .user__name,
+    .user__profession{
+        font-size: .9em;
+    }
+
+    .curve{
+        width: 100%;
+        height: 20vh;
+        background: url(images/pattern-curve.svg) no-repeat;
+        background-size: contain;
+        background-position: left bottom;
+    }
+
+    .card__info--container{
+        padding: 2.6rem 0 0 0;
+        background: url(images/pattern-quotes.svg) no-repeat;
+        background-size: 70px;
+        background-position: 65px top;
+    }
+    
+}
+
+@media (min-width: 64rem){
+
+    .card{
+        max-width: 900px;
+    }
+    .info__user{
+        max-width: 400px;
+        padding-inline-start: 1.5rem;
+    }
+    .card__paragraph{
+        padding-inline-start: 1.5rem;
+        width: 465px;
+        font-size: 1.4em;
+        color: var(--DarkBlue);
+    }
+    
+    .user__name,
+    .user__profession{
+        font-size: 1em;
+    }
+    .card__info--container{
+        background-position: 90px top;
+    }
 }

@@ -1,7 +1,7 @@
 const btns = document.querySelectorAll('.btn');
 const cards = document.querySelectorAll('.card');
 const arrows = document.querySelectorAll('.img__arrow');
-console.log(cards);
+console.log(btns);
 
 let currentActiveItem = 0;
 
@@ -15,21 +15,21 @@ const removeActiveElements = (selector) => {
     }
 }
 
+let currentCardIndex = 0;
 
 btns.forEach((btn, i) =>{
+    let btnsIndex = [i];
+    console.log(btnsIndex);
     btn.addEventListener('click', (e) =>{
-
-        const dataArticle = btn.getAttribute('data-article');
-        console.log(dataArticle);
-
-        const cardShow = document.querySelector(`.card:nth-of-type(${dataArticle})`);
-
+        const indexChange = parseInt(btn.getAttribute('data-index'));  // Get the index change value
         removeActiveElements('card--active');
+        removeActiveElements('btn--active');
         
-        // Add the card--active class to the selected card
-        if (cardShow) {
-            cardShow.classList.add('card--active');
-        }
-
+        currentCardIndex = (currentCardIndex + indexChange + cards.length) % cards.length;
+        cards[currentCardIndex].classList.add('card--active');
+        btn.classList.add('btn--active');
+        
     });
+
+
 });

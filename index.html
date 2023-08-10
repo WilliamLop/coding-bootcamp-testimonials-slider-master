@@ -6,36 +6,38 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/766c25c2d0.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <main class="main">
     <div class="card__contenedor">
-      <div class="card__container">
-        <div class="card card--active">
-          <div class="card__img--container">
-            <figure class="figure__img">
-              <img src="images/image-tanya.jpg" alt="" class="img__user">
-              <div class="card__btns">
-                <button type="submit" class="btn btn--prev">
-                  <img src="images/icon-prev.svg" alt="">
-                </button>
-                <button type="submit" class="btn btn--next">
-                  <img src="images/icon-next.svg" alt="">
-                </button>
-              </div>
-            </figure>
-          </div>
-          <div class="card__info--container">
-            <div class="card__info">
-              <p class="card__paragraph">
-                “ I’ve been interested in coding for a while but never taken the jump, until now. 
-                I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
-                excited about the future. ”
-              </p>
-              <div class="info__user">
-                <h4 class="user__name">Tanya Sinclair</h4>
-                <p class="user__profession">UX Engineer</p>
+      <div class="card card--active">
+          <div class="card__content">
+            <div class="card__img--container">
+              <figure class="figure__img">
+                <img src="images/image-tanya.jpg" alt="" class="img__user">
+                <div class="card__btns">
+                  <button type="submit" class="btn btn--prev btn--active">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button type="submit" class="btn btn--next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </figure>
+            </div>
+            <div class="card__info--container">
+              <div class="card__info">
+                <p class="card__paragraph">
+                  “ I’ve been interested in coding for a while but never taken the jump, until now. 
+                  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+                  excited about the future. ”
+                </p>
+                <div class="info__user">
+                  <h4 class="user__name">Tanya Sinclair</h4>
+                  <p class="user__profession">UX Engineer</p>
+                </div>
               </div>
             </div>
           </div>
@@ -46,11 +48,13 @@
               <figure class="figure__img">
                 <img src="images/image-john.jpg" alt="" class="img__user">
                 <div class="card__btns">
-                  <button type="submit" class="btn btn--prev" data-article="1">
-                    <img src="images/icon-prev.svg" alt="" class="img__arrow">
+                  <button type="submit" class="btn btn--prev" data-index="-1">
+                    <!-- <img src="images/icon-prev.svg" alt="" class="img__arrow"> -->
+                    <i class="fa-solid fa-chevron-left"></i>
                   </button>
-                  <button type="submit" class="btn btn--next" data-article="2">
-                    <img src="images/icon-next.svg" alt="" class="img__arrow">
+                  <button type="submit" class="btn btn--next" data-index="1">
+                    <!-- <img src="images/icon-next.svg" alt="" class="img__arrow"> -->
+                    <i class="fa-solid fa-chevron-right"></i>
                   </button>
                 </div>
               </figure>
@@ -71,12 +75,9 @@
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  <footer>
+    </main>
+    
     <div class="curve"></div>
-  </footer>
-  
   <script src="script.js"></script>
 </body>
 </html>
