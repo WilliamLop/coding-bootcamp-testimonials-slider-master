@@ -16,24 +16,12 @@ body{
     font-family: 'Inter', sans-serif;
 }
 .main{
+    box-sizing: border-box;
     position: relative;
     background-color: #ffff;
-}
-.card__contenedor{
-    display: grid;
-    place-items: center;
-    height:100vh;
-    position: relative;
-
+    height: 90vh;
 }
 
-.card__container{
-    width: 90%;
-    height: 100%;
-    display: grid;
-    margin: 0 auto;
-    max-width: 400px;
-}
 .card{
     position: absolute;
     top: 0;
@@ -41,10 +29,14 @@ body{
     left: 0;
     right: 0;
     margin: auto;
-    width: 90%;
-    height: 100%;
     opacity: 0;
+    height: 80%;
     transition: opacity .5s ease-in-out;
+}
+
+.card__content{
+    display: grid;
+    align-self: end;
 }
 
 .card--active{
@@ -128,7 +120,6 @@ body{
 }
 
 .curve{
-    bottom: 0;
     align-self: end;
     height: 100px;
     width: 100%;
@@ -137,3 +128,6 @@ body{
     background-position: bottom;
 }
 
+footer{
+    height: 10vh;
+}
