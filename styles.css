@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root{
+    /* Colors */
+    --DarkBlue: hsl(240, 38%, 20%);
+    --GrayishBlue: hsl(240, 18%, 77%);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: relative;
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+.main{
+    position: relative;
+    background-color: #ffff;
+}
+.card__contenedor{
+    display: grid;
+    place-items: center;
+    height:100vh;
+    position: relative;
+
+}
+
+.card__container{
+    width: 90%;
+    height: 100%;
+    display: grid;
+    margin: 0 auto;
+    max-width: 400px;
+}
+.card{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.card--active{
+    opacity: 1;
+    transition: opacity .5s ease-in-out;
+}
+
+
+
+.figure__img{
+    
+    text-align: center;
+    background: url(images/pattern-bg.svg) no-repeat;
+    background-size:contain;
+    background-position: bottom;
+    /* background-color: red; */
+    position: relative;
+    padding: 1rem;
+    
+}
+.card__img--container{
+    /* background: blue; */
+    padding: 1rem;
+}
+
+.img__user{
+    width: 70%;
+    border-radius: .5rem;
+    filter: drop-shadow(2px 2px 5px #4e4e4e56);
+}
+
+.card__btns{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #FFFFFF;
+    padding: .5rem;
+    width: 60px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(2px 2px 5px #4e4e4e56);
+}
+
+.btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn img{
+    width: 10px;
+}
+
+
+.card__info--container{
+    padding: 1rem 0 0 0;
+    background: url(images/pattern-quotes.svg) no-repeat;
+    background-size: 50px;
+    background-position: center top;
+}
+
+.card__info{
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+}
+
+.card__paragraph{
+    width: 290px;
+    margin: 0 auto;
+    color: var(--DarkBlue);
+}
+
+.user__profession{
+    font-size: .9em;
+    color: var(--GrayishBlue);
+}
+
+.curve{
+    bottom: 0;
+    align-self: end;
+    height: 100px;
+    width: 100%;
+    background: url(images/pattern-curve.svg) no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
